@@ -9,7 +9,7 @@ export const MyDatabaseFunctionfunction = ( function () {
             users.push(user)
         },
 
-        deletarUsuario(index: number): void {
+        remove(index: number): void {
             if (index >= 0 && index < MyDatabaseMethod.User.length) {
                 MyDatabaseMethod.User.splice(index, 1);
             }

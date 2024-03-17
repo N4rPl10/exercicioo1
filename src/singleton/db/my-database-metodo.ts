@@ -8,7 +8,7 @@ export class MyDatabaseMethod {
         MyDatabaseMethod.users.push(user);
     }
 
-    static deletarUsuario(index: number): void {
+    static remove(index: number): void {
         if (index >= 0 && index < MyDatabaseMethod.users.length) {
             MyDatabaseMethod.users.splice(index, 1);
         }
