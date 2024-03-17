@@ -1,6 +1,6 @@
-import { MyDatabaseMetod } from "./db/my-database-metodo";
+import { MyDatabaseMethod } from "./db/my-database-metodo";
 
-const myDatabase = MyDatabaseMetod;
+const myDatabase = MyDatabaseMethod;
 
 myDatabase.add({ name: 'Roberto', age: 30 });
 myDatabase.add({ name: 'Joana', age: 50 });

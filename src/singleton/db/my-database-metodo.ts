@@ -1,17 +1,22 @@
 import { User } from "../interface/user";
 
-const users: User[] = [];
+export class MyDatabaseMethod {
+    private static users: User[] = []; 
+  static User: any;
 
-export const MyDatabaseMetod = {
-    add(user: User): void {
-        users.push(user)
-    },
+    static add(user: User): void {
+        MyDatabaseMethod.users.push(user);
+    }
 
-    //Criar um método para remover o usuário.
-    
-    show(): void{
-        for(const user of users){
-            console.log(user)
+    static deletarUsuario(index: number): void {
+        if (index >= 0 && index < MyDatabaseMethod.users.length) {
+            MyDatabaseMethod.users.splice(index, 1);
+        }
+    }
+
+    static show(): void {
+        for (const user of MyDatabaseMethod.users) {
+            console.log(user);
         }
     }
 }

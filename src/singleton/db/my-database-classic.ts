@@ -1,4 +1,5 @@
 import { User } from '../interface/user';
+import { MyDatabaseMethod } from './my-database-metodo';
 
 export class MyDatabaseClassic {
   private static _instance: MyDatabaseClassic | null = null;
@@ -18,7 +19,11 @@ export class MyDatabaseClassic {
     this.users.push(user);
   }
 
-  // Criar um método para remover usuário.
+  deletarUsuario(index: number): void {
+    if (index >= 0 && index < MyDatabaseMethod.User.length) {
+      MyDatabaseMethod.User.splice(index, 1);
+    }
+}
 
   show(): void {
     for (const user of this.users) {

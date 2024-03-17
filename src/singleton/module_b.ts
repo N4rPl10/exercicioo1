@@ -1,11 +1,12 @@
-import { MyDatabaseMetod } from "./db/my-database-metodo";
+import { MyDatabaseMethod } from "./db/my-database-metodo";
 import { myDatabase } from "./module_a";
 
-const myDatabaseClassic = MyDatabaseMetod;
+const myDatabaseClassic = MyDatabaseMethod;
 
 myDatabaseClassic.add({ name: 'Luiz', age: 30 });
 myDatabaseClassic.add({ name: 'Maria', age: 50 });
 myDatabaseClassic.add({ name: 'Eduardo', age: 25 });
+myDatabaseClassic.deletarUsuario(3)
 myDatabaseClassic.show()
 
 console.log(myDatabaseClassic === myDatabase)
